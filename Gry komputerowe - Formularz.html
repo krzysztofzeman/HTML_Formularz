@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> Gry komputerowe - Formularz </title>
+
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+            }   
+
+    form {
+    background: #ffffff;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+    h2 {
+        font-size:30px;
+        margin-bottom:10px;
+        color:#960696;
+        }
+
+    h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333333;
+    }
+
+    .radio-group, .checkbox-group, .question {
+    margin-bottom: 15px;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+    cursor: pointer;
+    }
+
+    label {
+    font-size: 16px;
+    color: #555555;
+    cursor: pointer;
+    }   
+
+    select, input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    }
+
+    select:focus,
+    input[type="text"]:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+
+    button {
+    background-color: #007BFF;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    }
+
+    button:hover {
+    background-color: #0056b3;
+    }
+
+    </style>
+
+</head>
+
+<body>
+    <h2><center>Ankieta o grach komputerowych</center></h2>
+    
+    <form action="adres_do_przetworzenia_formularza.php" method="post">
+
+        <h3>Płeć</h3>
+        <div class="radio-group">
+            <input type="radio" id="Kobieta" name="gry-plec" value="Kobieta" required>
+            <label for="Kobieta">Kobieta</label>
+        </div>
+        <div class="radio-group">
+            <input type="radio" id="Mężczyzna" name="gry-plec" value="Mężczyzna">
+            <label for="Mężczyzna">Mężczyzna</label>
+        </div>
+
+        <h3>Wiek</h3>
+        <div class="radio-group">
+            <input type="radio" id="-18" name="gry-wiek" value="-18">
+            <label for="-18"> poniżej 18 lat </label>
+        </div>
+        <div class="radio-group">
+            <input type="radio" id="18-29" name="gry-wiek" value="18-29">
+            <label for="18-29"> 18 - 29 </label>
+        </div>
+        <div class="radio-group">
+            <input type="radio" id="30-39" name="gry-wiek" value="30-39">
+            <label for="30-39"> 30 - 39 </label>
+        </div>
+        <div class="radio-group">
+            <input type="radio" id="40-49" name="gry-wiek" value="40-49">
+            <label for="40-49"> 40 - 49 </label>
+        </div>
+        <div class="radio-group">
+            <input type="radio" id="50-" name="gry-wiek" value="50-">
+            <label for="50-"> 50 lat i więcej </label>
+        </div>
+
+        <h3>Jaki jest twój status zawodowy?</h3>
+        <div class="radio-group">
+            <input type="radio" id="Pracujący" name="status-zawodowy" value="Pracujący">
+            <label for="Pracujący">Pracujący</label>
+        </div>
+        <div class="radio-group">
+            <input type="radio" id="Przedsiębiorca" name="status-zawodowy" value="Przedsiębiorca">
+            <label for="Przedsiębiorca">Przedsiębiorca</label>
+        </div>
+        <div class="radio-group">
+            <input type="radio" id="Bezrobotny" name="status-zawodowy" value="Bezrobotny">
+            <label for="Bezrobotny">Bezrobotny</label>
+        </div>
+        <div class="radio-group">
+            <input type="radio" id="Emerytura" name="status-zawodowy" value="Emerytura">
+            <label for="Emerytura">Na emeryturze/rencie</label>
+        </div>
+        <div class="radio-group">
+            <input type="radio" id="Student" name="status-zawodowy" value="Student">
+            <label for="Student">Student/uczeń</label>
+        </div>
+
+        
+        <h3 for="godziny-gry">Ile godzin tygodniowo grasz w gry?</h3>
+        <select id="godziny-gry" name="godziny-gry" required>
+            <option value="" disabled selected>Wybierz</option>
+            <option value="0-5">0-5 godzin</option>
+            <option value="6-10">6-10 godzin</option>
+            <option value="11-20">11-20 godzin</option>
+            <option value="21+">21 godzin lub więcej</option>
+        </select>
+
+        <div class="question">
+            <h3>Na jakiej platformie najczęściej grasz?</h3>
+            <div>
+                <input type="radio" id="pc" name="platform" value="pc" required>
+                <label for="pc">PC</label>
+            </div>
+            <div>
+                <input type="radio" id="console" name="platform" value="console">
+                <label for="console">Konsola</label>
+            </div>
+            <div>
+                <input type="radio" id="mobile" name="platform" value="mobile">
+                <label for="mobile">Urządzenie mobilne</label>
+            </div>
+        </div>
+
+
+        <div>
+        <h3>W jakie gry najczęściej grasz?</h3>
+        <label>
+        <input type="checkbox" name="genre" value="rpg">
+            RPG
+        </label><br>
+        <label>
+        <input type="checkbox" name="genre" value="fps">
+            FPS
+        </label><br>
+        <label>
+        <input type="checkbox" name="genre" value="strategy">
+            Strategiczne
+        </label><br>
+        <label>
+        <input type="checkbox" name="genre" value="adventure">
+            Przygodowe
+        </label><br>
+        <label>
+        <input type="checkbox" name="genre" value="sports">
+            Sportowe
+        </label><br>
+        <label>
+        <input type="checkbox" name="genre" value="other">
+            Inne
+        </label><br>
+        </div>
+
+        <h3 for="Gry-zespołowe">Czy lubisz gry zespołowe?</h3>
+        <select id="Gry-zespołowe" name="Gry-zespołowe" required>
+            <option value="" disabled selected>Wybierz</option>
+            <option value="Tak">Tak</option>
+            <option value="Nie">Nie</option>
+            <option value="Sporadycznie">Sporadycznie</option>
+        </select>
+        
+        <div class="question">
+            <h3 for="liczba-gry">Ile w przybliżeniu gier rocznie kupujesz?</h3>
+            <input type="text" id="liczba-gry" name="liczba-gry" required>
+        </div>
+
+        <div class="question">
+            <h3 for="cena-gry">Jaką kwotę jesteś w stanie przeznaczyć na jednorazowy zakup gry komputerowej?</h3>
+            <input type="text" id="cena-gry" name="cena-gry" required>
+        </div>
+
+        <div class="question">
+            <h3 for="favorite-game">Jaka jest Twoja ulubiona gra komputerowa?</h3>
+            <input type="text" id="favorite-game" name="favorite-game" required>
+        </div>
+
+        <h3>
+        <button type="submit">Wyślij</button>
+        </h3>
+    </form>
+
+</body>
